@@ -72,6 +72,12 @@ public class NavigationStack: ObservableObject {
             }
         }
     }
+    
+    /// Check to see if we have the destination id in the view stack
+    /// - Parameter id: The id to check for in the stack
+    public func hasPopDestination(_ id: String) -> Bool {
+        return viewStack.indexForView(withId: id) != nil
+    }
 
     //the actual stack
     private struct ViewStack {
@@ -109,7 +115,7 @@ public class NavigationStack: ObservableObject {
             views.removeAll()
         }
 
-        private func indexForView(withId identifier: String) -> Int? {
+        internal func indexForView(withId identifier: String) -> Int? {
             views.firstIndex {
                 $0.id == identifier
             }
