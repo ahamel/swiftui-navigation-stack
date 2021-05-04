@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Matteo Puccinelli' => 'matteo.puccinelli@gmail.com' }
-  s.source           = { :git => 'https://github.com/matteopuc/swiftui-navigation-stack.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/ahamel/swiftui-navigation-stack.git', :tag => s.version.to_s }
   
 
   s.ios.deployment_target = '13.0'
